@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  get '/get_inventory', to: 'inventories#get_inventory'
+
+
   resources :inventories
   resources :shipments
   resources :about
