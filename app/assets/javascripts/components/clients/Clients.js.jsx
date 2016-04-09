@@ -4,6 +4,16 @@ class Clients extends React.Component {
     this.state = {clients: this.props.clients, showThis: false}
     this.showAdd = this.showAdd.bind(this);
     this.newClient = this.newClient.bind(this);
+    this.deleteClient = this.deleteClient.bind(this);
+  }
+
+  deleteClient(id) {
+    $.ajax({
+      url: `clients/${id}`,
+      type: 'DELETE'
+    }).success( client => {
+      this.setState({clients: this.state.clients});
+    });
   }
 
   newClient(client) {
@@ -26,7 +36,7 @@ class Clients extends React.Component {
   render() {
     let clients = this.state.clients.map( client => {
       return(
-        <Client key={`client-${client.id}`} {...client} />
+        <Client key={`client-${client.id}`} {...client} deleteClient={this.deleteClient}/>
       );
     })
     return(
@@ -37,20 +47,7 @@ class Clients extends React.Component {
         </div>
           {this.seeAdd()}
         <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Last Product</th>
-                <th>Last Order Type</th>
-                <th>Last Quantity</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {clients}
-            </tbody>
-          </table>
+          {clients}
         </div>
       </div>
     );

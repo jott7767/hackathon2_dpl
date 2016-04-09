@@ -10,6 +10,12 @@ class ClientsController < ApplicationController
     end
   end
 
+  def destroy
+    if Client.find(params[:id]).destroy
+      render json: { id: params[:id].to_i }
+    end
+  end
+
   private
 
   def client_params

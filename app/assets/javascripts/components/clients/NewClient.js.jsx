@@ -11,7 +11,7 @@ class NewClient extends React.Component {
       url: '/clients',
       type: 'POST',
       data: { client: {name: name.value} },
-      dataType: 'JSON',
+      dataType: 'JSON'
     }).success( client => {
       this.props.newClient(client);
     }).error( errors => {
