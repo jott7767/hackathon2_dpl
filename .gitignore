@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+config/shipment.yml
+config/initializers/api_keys.rb

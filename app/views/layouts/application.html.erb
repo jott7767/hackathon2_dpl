@@ -12,6 +12,41 @@
 </head>
 <body>
 
+  <% if user_signed_in? %>
+    <nav>
+      <div class="nav-wrapper red darken-4" style="margin-bottom: 0;">
+        <a href="#" class="brand-logo">Brick N Morty</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a></li>
+          <li><a href="/about">About Us</a></li>
+          <!-- Dropdown Trigger -->
+          <li>
+            <a class='dropdown-button btn-med grey darken-3' href='#' data-activates='dropdown1'>Tools</a>
+            <!-- Dropdown Structure -->
+          </li>
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="/shipments" class="red-text text-lighten2">Shipping Calculator</a></li>
+              <li><a href="inventories" class="red-text text-lighten2">Inventory</a></li>
+              <li><a href="clients" class="red-text text-lighten2">Client Tracker</a></li>
+            </ul>
+        </ul>
+      </div>
+    </nav>
+  <% else %>
+    <nav>
+      <div class="nav-wrapper red darken-4" style="margin-bottom: 0;">
+        <a href="#" class="brand-logo">Brick N Morty</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/users/sign_in">Login</a></li>
+          <li><a href="/users/sign_up">Signup</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  <% end %>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
