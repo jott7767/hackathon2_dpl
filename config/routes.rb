@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :clients
   resources :inventories
   resources :shipments
-  
+
   devise_for :users
 end
