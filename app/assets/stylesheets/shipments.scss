@@ -1,3 +1,72 @@
-// Place all the styles related to the shipments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.stats {
+  margin-top: 10em;
+}
+
+.btn {
+  width: 10em;
+  height: 3em;
+  background-color: #901111;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  color: white;
+  border: 0;
+}
+
+.btn:hover{
+  background-color: #da4a4a;
+  box-shadow: 0 3px 1em #da4a4a;
+}
+
+.field {
+  border-top: 2px solid #811818;
+  border-left: 2px solid #811818;
+  border-right: 2px solid #811818;
+  border: 2px solid #811818;
+  width: 30em;
+  height: 5em;
+  background-color: inherit;
+  border-radius: 25px;
+}
+
+.field:focus{
+  border: 2px solid #ef9a9a !important;
+  border-bottom: 2px solid #ef9a9a;
+  outline: none;
+  border-radius: 25px;
+}
+
+input:focus {
+  border: 2px solid #ef9a9a !important;
+  border-bottom: 2px solid #ef9a9a;
+  outline: none;
+  border-radius: 25px;
+}
+
+.field:hover {
+  border: 2px solid #ef9a9a;
+  border-radius: 25px;
+}
+
+.floating {
+  box-shadow: 0 2px 1em black;
+  width: inherit;
+  padding: 3em;
+  background-color: white;
+  border-radius: 10px;
+  margin: 2em 5em 5em 5em;
+}
+
+body {
+  background-color: #bebebe;
+  margin-bottom: 20em;
+}
+
+iframe{
+  border: 0;
+}
+
+.bot-marg {
+  margin-bottom: 5em;
+}

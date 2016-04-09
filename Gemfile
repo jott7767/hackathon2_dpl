@@ -22,6 +22,8 @@ gem 'react-rails'
 gem 'devise'
 gem 'actionmailer'
 gem 'paperclip'
+gem 'geocoder'
+gem 'google_directions'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
