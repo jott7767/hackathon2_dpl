@@ -34,9 +34,9 @@ class Client extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="col s12 m6">
         <div onClick={this.showOrders}>
-          {this.props.name}
+          <h1>{this.props.name}</h1>
         </div>
           <button onClick={ () => this.props.deleteClient(this.props.id)} className="btn">Delete</button>
         <div>

@@ -40,10 +40,10 @@ class Clients extends React.Component {
       );
     })
     return(
-      <div>
+      <div className="floating center">
         <div className="row">
           <h1>Clients</h1>
-          <button onClick={this.showAdd}>Add Client</button>
+          <button className="btn" onClick={this.showAdd}>Add Client</button>
         </div>
           {this.seeAdd()}
         <div>

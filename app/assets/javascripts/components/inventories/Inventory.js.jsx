@@ -7,11 +7,11 @@ class Inventory extends React.Component {
         this.editItem = this.editItem.bind(this);
         this.addItem = this.addItem.bind(this);
     }
-    
+
     componentWillMount() {
       this.getInventory();
     }
-    
+
     getInventory() {
       $.ajax({
         url: '/get_inventory',
@@ -20,7 +20,7 @@ class Inventory extends React.Component {
         this.setState({inventories: data})
       })
     }
-    
+
     deleteItem(id) {
       $.ajax({
         url: `/inventories/${id}`,
@@ -34,7 +34,7 @@ class Inventory extends React.Component {
         console.log(data);
       });
     }
-    
+
     editItem(id, invItem) {
       $.ajax({
         url: `/inventories/${id}`,
@@ -47,7 +47,7 @@ class Inventory extends React.Component {
         console.log(data);
       });
     }
-    
+
     addItem(e) {
       e.preventDefault();
       $.ajax({
@@ -61,14 +61,14 @@ class Inventory extends React.Component {
         console.log(data);
       });
     }
-    
+
     render() {
       let inventory = this.state.inventories.map(item => {
         console.log(item)
         return(<InventoryItem key={`item-${item.id}`} {...item} deleteItem={this.deleteItem} editItem={this.editItem} />)
       });
       return(
-        <div className="container">
+        <div className="container floating">
           <div className="center">
             <h1>Inventory</h1>
               <form>
@@ -77,13 +77,13 @@ class Inventory extends React.Component {
                 <input placeholder="wholesale price" ref="wholesale_price" />
                 <input placeholder="retail price" ref="retail_price"/>
                 <button className="btn" onClick={this.addItem}>Add to Inventory</button>
-              </form>  
+              </form>
             <hr />
           </div>
           <div className="row">
             {inventory}
           </div>
-        </div>  
+        </div>
       );
     }
 }

@@ -54,7 +54,7 @@ class Shipment extends React.Component {
   // }
 
   render(){
-    let source = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.destination}`
+    let source = `https://www.google.com/maps/embed/v1/directions?key=apikey&origin=${this.state.origin}&destination=${this.state.destination}`
     return(
       <div className="row container floating">
         <div className="col s12 col m12 l6 container">

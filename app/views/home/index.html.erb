@@ -10,7 +10,7 @@
           <p>Use me to estimate shipping.</p>
         </div>
         <div class="card-action">
-          <button href="/shipments" class="btn grey lighten-3 red-text text-darken4">GO</button>
+          <button class="btn grey lighten-3 red-text text-darken4"><%= link_to 'Shipments', shipments_path  %></button>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
           <p>Check your inventory here.</p>
         </div>
         <div class="card-action">
-          <button href="/inventories" class="btn grey lighten-3 red-text text-darken4">GO</button>
+          <button class="btn grey lighten-3 red-text text-darken4"><%= link_to 'Inventories', inventories_path  %></button>
         </div>
       </div>
     </div>
@@ -32,13 +32,13 @@
       <div class="card red darken-4">
         <div class="card-image">
           <img src="http://m.searchpointer.com/a-r-chamber-bricks/images/brick_texture3325.jpg">
-          <span class="shippingTracker">Customer Tracker</span>
+          <span class="shippingTracker">Client Tracker</span>
         </div>
         <div class="customer tracker">
           <p>Check all your customer info and orders here.</p>
         </div>
         <div class="card-action">
-          <button href="/clients" class="btn grey lighten-3 red-text text-darken4">GO</button>
+          <button class="btn grey lighten-3 red-text text-darken4"><%= link_to 'Clients', clients_path  %></button>
         </div>
       </div>
     </div>

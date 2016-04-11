@@ -17,6 +17,9 @@
 .btn:hover{
   background-color: #da4a4a;
   box-shadow: 0 3px 1em #da4a4a;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 .field {
@@ -37,12 +40,7 @@
   border-radius: 25px;
 }
 
-input:focus {
-  border: 2px solid #ef9a9a !important;
-  border-bottom: 2px solid #ef9a9a;
-  outline: none;
-  border-radius: 25px;
-}
+
 
 .field:hover {
   border: 2px solid #ef9a9a;
