@@ -49,12 +49,13 @@ class Inventory extends React.Component {
     }
 
     addItem(e) {
+      let newInv = this.refs
       e.preventDefault();
       $.ajax({
-        url: '/inventories',
+        url: `/inventories`,
         type: 'POST',
         dataType:'JSON',
-        data: {inventory: { item: this.refs.item, quantity: this.refs.quantity, wholesale_price: this.refs.wholesale_price, retail_price: this.refs.retail_price} }
+        data: { inventory: { item: newInv.item.value, quantity: newInv.quantity.value, wholesale_price: newInv.wholesale_price.value, retail_price: newInv.retail_price.value} }
       }).done(data => {
         this.getInventory();
       }).fail(data => {
@@ -64,7 +65,6 @@ class Inventory extends React.Component {
 
     render() {
       let inventory = this.state.inventories.map(item => {
-        console.log(item)
         return(<InventoryItem key={`item-${item.id}`} {...item} deleteItem={this.deleteItem} editItem={this.editItem} />)
       });
       return(
